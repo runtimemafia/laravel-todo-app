@@ -9,6 +9,10 @@ use function Pest\Laravel\patch;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
+Route::get("/", function(){
+    return "/api is working";
+});
+
 Route::get("/todos", [TodoController::class, "getall"])->name("all");
 
 Route::post("/new", [TodoController::class,"new"])->name("new");
